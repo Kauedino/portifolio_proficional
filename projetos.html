@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Kauê</title>
+
+  <!-- Folha de estilo principal compartilhada entre as páginas -->
+  <link rel="stylesheet" href="estilo-da-pagina-inicial.css">
+</head>
+<body>
+  <header>
+    <!-- Logo institucional posicionada à esquerda -->
+    <span class="logo_Pinheiro"> 
+      <img src="imagens/logo_sem_fundo.png" alt="logo">
+    </span>
+
+    <nav>
+      <!-- Menu de navegação presente em todas as páginas -->
+      <ul class="links_nav_bar">
+        <li><a href="Pagina_ini.html">Inicio</a></li>
+        <li><a href="sobre_mim.html">Sobre mim</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Links para redes sociais, abrindo em nova aba -->
+    <div class="redes-sociais-imagens-navbar">
+      <a href="https://www.linkedin.com/in/kau%C3%AA-fillipe-pinheiro-3738a828b/" target="_blank">
+        <img src="imagens/linkedin.png" alt="Meu perfil no linkedin">
+      </a>
+
+      <a href="https://github.com/Kauedino/Kauedino" target="_blank">
+        <img src="imagens/github.png" alt="Meu perfil no github">
+      </a>
+
+      <a href="https://www.instagram.com/kauefpinheiro?igsh=bGtrbmd1cTE2ZDd6" target="_blank">
+        <img src="imagens/instagram.png" alt="Meu perfil no instagram">
+      </a>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal da página de projetos -->
+  <main>
+    <!-- Card de apresentação do projeto realizado como atividade prática -->
+    <div class="card">
+      <div class="card__border"></div>
+
+      <div class="card_title__container">
+        <span class="card_title">Portfólio Pessoal</span>
+        <p class="card_paragraph">
+          Este projeto consiste na criação de um site de portfólio pessoal, desenvolvido como atividade prática para a disciplina de Programação Front-End.
+        </p>
+      </div>
+
+      <hr class="line" />
+
+      <!-- Captura de tela do projeto com descrição alternativa -->
+      <img src="imagens/imagem_do_site.PNG" alt="Imagem do site do portfólio">
+
+      <!-- Link para navegar até a página inicial do projeto -->
+      <a href="pagina_ini.html" class="button">Clique aqui para conhecer o projeto</a>
+    </div>
+  </main>
+
+  <!-- Scripts adicionados ao final do body para melhor performance -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Reset global para evitar inconsistências de margin/padding e garantir box-sizing previsível */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base da página */
+body {
+  background-color: #000814;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Cabeçalho: layout flexível para distribuir logo, menu e redes sociais */
+header {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #031B29;
+}
+
+/* Logo com altura máxima para controle visual */
+.logo_Pinheiro img {
+  max-height: 150px;
+  display: block; /* remove espaçamento indesejado abaixo da imagem */
+}
+
+/* Menu de navegação: lista horizontal com espaçamento consistente */
+.links_nav_bar {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* Links do menu: estilo limpo com transição para hover */
+.links_nav_bar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transform: translateY(-5px);
+  transition: color 0.3s;
+}
+
+.links_nav_bar li a:hover {
+  color: #00f7ff;
+}
+
+/* Ícones das redes sociais no cabeçalho com espaçamento e transição para efeito hover */
+header div a img {
+  max-height: 30px;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.redes-sociais-imagens-navbar img {
+  transition: transform 0.3s ease;
+}
+
+/* Seção inicial: layout flexível para apresentação com texto e foto */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  gap: 20px;
+  color: white;
+  margin: 5% 0;
+  width: 100%;
+}
+
+.apresentacao_texto {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+}
+
+/* Responsividade da foto de apresentação */
+.foto_apresentacao {
+  width: 500px; /* tamanho fixo inicial */
+  padding-left: 1%;
+  padding-right: 5%;
+  max-width: 100%; /* permite reduzir a largura para telas pequenas */
+  height: auto; /* mantém proporção */
+}
+
+
+/* Animação de texto tipo máquina de escrever */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  color: #00f7ff;
+  font-size: 45px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #000; }
+}
+
+/* Seção "Sobre Mim" com destaque e efeitos visuais sutis */
+.sobre-mim-section {
+  background-color: #000814;
+  padding: 80px 0;
+  color: white;
+}
+
+.sobre-mim-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sobre-mim-titulo {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00f7ff;
+  position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.sobre-mim-titulo::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #00f7ff;
+  margin: 15px auto 0;
+}
+
+/* Cards de texto com efeito hover para leve destaque */
+.sobre-mim-item {
+  margin-bottom: 40px;
+  background: rgba(0, 247, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 3px solid #00f7ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-mim-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
+}
+
+.sobre-mim-subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #00f7ff;
+}
+
+.sobre-mim-texto {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Card do projeto: layout flexível com gradiente de fundo e sombra interna */
+.card {
+  --white: hsl(0, 0%, 100%);
+  --paragraph: hsl(0, 0%, 83%);
+  --line: hsl(240, 9%, 17%);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 19rem;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: 
+    radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%);
+  border-radius: 1rem;
+  box-shadow: inset 0 -16px 24px rgba(255, 255, 255, 0.1);
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.card__border {
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card_title {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.card_paragraph {
+  margin-top: 0.25rem;
+  width: 65%;
+  font-size: 0.5rem;
+  color: var(--paragraph);
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--line);
+  border: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  background: linear-gradient(0deg, hsl(189, 92%, 58%), hsl(189, 99%, 26%));
+  font-size: 0.75rem;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Seção contato: layout flexível para duas colunas com espaçamento */
+.contato-secao {
+  display: flex;
+  background-color: #000814;
+  color: #ccd6f6;
+  padding: 80px 0;
+}
+
+.contato-secao .container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contato-info, .contato-form {
+  flex: 1;
+}
+
+/* Título da seção contato com borda inferior para destaque */
+.contato-info h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #64ffda;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Estilos do formulário e inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #8892b0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #112240;
+  border: 2px solid #233554;
+  border-radius: 5px;
+  color: #ccd6f6;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* Efeito de foco para inputs e textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #64ffda;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Botão enviar */
+.btn-enviar {
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Espaçamento e transição para imagens das redes sociais na seção contato */
+.redes-sociais-imagens img {
+  margin-top: 5%;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+
+/* 
+  Media query para melhorar a responsividade da seção inicial ('.inicio') 
+  em dispositivos com largura máxima de 768px (tablets e celulares).
+  Altera o layout para empilhar verticalmente os elementos e ajusta a largura da imagem,
+  garantindo melhor usabilidade e visual em telas pequenas.
+*/
+@media (max-width: 768px) {
+  .inicio {
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;     
+  }
+
+  .apresentacao_texto {
+    padding-left: 0;        
+    margin-bottom: 20px;    
+  }
+
+  .foto_apresentacao {
+    width: 80%;             
+    padding-left: 0;        
+    padding-right: 0;       
+  }
+}
+
