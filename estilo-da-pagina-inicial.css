@@ -54,8 +54,13 @@ header {
 /* Ícones das redes sociais no cabeçalho com espaçamento e transição para efeito hover */
 header div a img {
   max-height: 30px;
-  margin-left: 15px;
+  margin-left: 20px;
   vertical-align: middle;
+}
+.redes-sociais-imagens-navbar {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;  
 }
 
 .redes-sociais-imagens-navbar img {
