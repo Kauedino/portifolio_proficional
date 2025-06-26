@@ -21,6 +21,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #031B29;
+  width: 100vw; 
+  flex-wrap: wrap; 
 }
 
 /* Logo com altura máxima para controle visual */
@@ -331,6 +333,29 @@ header div a img {
   garantindo melhor usabilidade e visual em telas pequenas.
 */
 @media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .links_nav_bar {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo_Pinheiro img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .redes-sociais-imagens-navbar img {
+    margin-left: 10px;
+    max-width: 20px;
+  }
   .inicio {
     flex-direction: column; 
     align-items: center;   
@@ -352,8 +377,10 @@ header div a img {
   }
 
   .typewriter {
-    font-size: 28px; /* Reduz tamanho do texto para caber melhor */
-  }
+    font-size: 28px;
+  white-space: normal; /* Permite quebra de linha */
+}
+
 }
 
 
