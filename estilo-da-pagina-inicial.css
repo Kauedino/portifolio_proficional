@@ -320,10 +320,9 @@ header div a img {
 
 .redes-sociais-imagens {
   display: flex;
-  flex-direction: row; /* garante que fiquem lado a lado */
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center; /* alinha verticalmente */
-  gap: 20px; /* espaço entre os ícones */
+  flex-direction: row; 
+  align-items: center; 
+  gap: 20px; 
   margin-top: 5%;
 }
 
@@ -402,5 +401,13 @@ header div a img {
   margin-bottom: 30px;     
 }
 
+.redes-sociais-imagens {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 5%;
+}
 
 }
