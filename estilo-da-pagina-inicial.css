@@ -394,6 +394,11 @@ header div a img {
   margin-bottom: 30px;     
 }
 
+.redes-sociais-imagens img {
+  margin-top: 5%;
+  transition: transform 0.3s ease;
+  align-items: center;
+}
 
 
 }
