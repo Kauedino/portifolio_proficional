@@ -1,8 +1,7 @@
 // Garante que o código só execute após o carregamento completo da página
-$(document).ready(function() {
-
+$(document).ready(function () {
   // Validação do formulário de contato ao tentar enviar
-  $('#form-contato-principal').submit(function(event) {
+  $('#form-contato-principal').submit(function (event) {
     event.preventDefault(); // Evita o envio padrão para validar antes
 
     var nome = $('#nome').val();
@@ -12,7 +11,7 @@ $(document).ready(function() {
     // Verifica se o campo nome não está vazio
     if (nome.trim() === '') {
       alert('Por favor, preencha seu nome.');
-      return; // Para a execução se inválido
+      return;
     }
 
     // Valida se o e-mail não está vazio e contém '@'
@@ -29,18 +28,16 @@ $(document).ready(function() {
 
     // Se todos os campos estiverem válidos, mostra mensagem de sucesso
     alert('Formulário enviado com sucesso!');
-
-    // Reseta o formulário para ficar pronto para novo envio
-    this.reset();
+    this.reset(); // Reseta o formulário após envio
   });
 
   // Efeito hover nas imagens das redes sociais dentro das seções específicas
   $('.redes-sociais-imagens img').hover(
-    function() {
+    function () {
       // Ao entrar com o mouse, a imagem sobe 8px para dar efeito de destaque
       $(this).css('transform', 'translateY(-8px)');
     },
-    function() {
+    function () {
       // Ao sair com o mouse, retorna à posição original
       $(this).css('transform', 'translateY(0)');
     }
@@ -48,12 +45,16 @@ $(document).ready(function() {
 
   // Mesmo efeito para as imagens das redes sociais no menu de navegação (navbar)
   $('.redes-sociais-imagens-navbar img').hover(
-    function() {
+    function () {
       $(this).css('transform', 'translateY(-8px)');
     },
-    function() {
+    function () {
       $(this).css('transform', 'translateY(0)');
     }
   );
 
+  // Menu mobile: abre/fecha o menu ao clicar no botão ☰
+  $('.menu-toggle').click(function () {
+    $('.links_nav_bar').toggleClass('active');
+  });
 });
