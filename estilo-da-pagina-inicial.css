@@ -318,10 +318,18 @@ header div a img {
   background-color: rgba(100, 255, 218, 0.1);
 }
 
+.redes-sociais-imagens {
+  display: flex;
+  flex-direction: row; /* garante que fiquem lado a lado */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* alinha verticalmente */
+  gap: 20px; /* espaço entre os ícones */
+  margin-top: 5%;
+}
+
 /* Espaçamento e transição para imagens das redes sociais na seção contato */
 .redes-sociais-imagens img {
   margin-top: 5%;
-  display: flex;
   transition: transform 0.3s ease;
 }
 
@@ -392,12 +400,6 @@ header div a img {
   width: 100%;             
   padding: 0 20px;    
   margin-bottom: 30px;     
-}
-
-.redes-sociais-imagens img {
-  margin-top: 5%;
-  transition: transform 0.3s ease;
-  align-items: center;
 }
 
 
