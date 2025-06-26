@@ -11,12 +11,16 @@
 <body>
   <header>
     <!-- Logo institucional posicionada à esquerda -->
-   <a class="logo_Pinheiro" href="index.html">
-      <img src="imagens/logo_sem_fundo.png" alt="Logo do portfólio - Link para a página inicial">
-    </a>
+    <span class="logo_Pinheiro"> 
+      <img src="imagens/logo_sem_fundo.png" alt="logo">
+    </span>
 
-    <nav>
-      <!-- Menu de navegação presente em todas as páginas -->
+   <nav>
+      <!-- Botão do menu (hamburguer) visível apenas no mobile -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+        ☰
+       </button>
+      <!-- Menu de navegação principal do site -->
       <ul class="links_nav_bar">
         <li><a href="index.html">Início</a></li>
         <li><a href="sobre_mim.html">Sobre mim</a></li>
