@@ -356,6 +356,7 @@ header div a img {
     margin-left: 10px;
     max-width: 20px;
   }
+
   .inicio {
     flex-direction: column; 
     align-items: center;   
@@ -366,7 +367,7 @@ header div a img {
   .apresentacao_texto {
     padding-left: 0;        
     margin-bottom: 20px;
-    align-items: center;  /* Alinha os textos ao centro */
+    align-items: center;  
   }
 
   .foto_apresentacao {
@@ -378,9 +379,7 @@ header div a img {
 
   .typewriter {
     font-size: 28px;
-  white-space: normal; /* Permite quebra de linha */
-}
+    white-space: normal; /* Permite quebra de linha */
+  }
 
 }
-
-
